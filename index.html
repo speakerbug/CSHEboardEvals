@@ -8,6 +8,9 @@
     <meta name="HandheldFriendly" content="true">
     <title>Eboard Evaluation</title>
     <link href="formCss.css" rel="stylesheet" type="text/css">
+    <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSH Bootstrap Theme -->
+	<link href="admin/css/members.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="EboardEvalsTheme.css">
     <style type="text/css">
         .form-label-left {
@@ -45,6 +48,28 @@
 </head>
 
 <body>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="admin/images/csh_logo_white.svg" alt="CSH" class="logo"> <span>Eboard Evals</span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+		    <li><a href="https://whatif.csh.rit.edu" target="_blank"><span class="glyphicon glyphicon-new-window"></span> What if CSH...</a></li>
+		  </ul>  
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container">
+    <BR><BR><BR>
     <form validate class="jotform-form" action="EboardEvals.php" method="POST" name="EboardEvalsForm">
         <div class="form-all">
             <ul class="form-section page-section">
@@ -63,13 +88,13 @@
                 <li class="form-line" data-type="control_textbox" id="id_1">
                     <label class="form-label form-label-left form-label-auto" id="label_1" for="input_1"> Name (optional): </label>
                     <div id="cid_1" class="form-input jf-required">
-                        <input type="text" class=" form-textbox" data-type="input-textbox" id="input_1" name="name" size="20" value="">
+                        <input type="text" class="form-control form-textbox" data-type="input-textbox" id="input_1" name="name" size="20" value="">
                     </div>
                 </li>
                 <li class="form-line" data-type="control_textbox" id="id_3">
                     <label class="form-label form-label-left form-label-auto" id="label_3" for="input_3"> Eboard Position (Required): </label>
                     <div  required id="cid_3" class="form-input jf-required">
-                        <select  id="cid_3" required=required class="form-line" name="position" validate>
+                        <select  id="cid_3" required=required class="form-line form-control" name="position" validate>
                             <option disabled value="select one">Select One</option>
                             <option value="Eboard In General">Eboard In General</option>
                             <option value="Chairman">Chairman</option>
@@ -344,7 +369,7 @@
                 <li class="form-line" data-type="control_textarea" id="id_5">
                     <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> What you dislike (Required): </label>
                     <div id="cid_5" class="form-input jf-required">
-                        <textarea required id="input_5" class="form-textarea" name="dislike" cols="40" rows="6"></textarea>
+                        <textarea required id="input_5" class="form-textarea form-control" name="dislike" cols="40" rows="6"></textarea>
                     </div>
                 </li>
 
@@ -358,7 +383,7 @@
                 <li class="form-line" data-type="control_button" id="id_2">
                     <div id="cid_2" class="form-input-wide">
                         <div style="text-align:left" class="form-buttons-wrapper">
-                            <button id="submit" type="submit" class="form-submit-button">
+                            <button id="submit" type="submit" class="btn btn-primary">
                                 Submit
                             </button>
                         </div>
@@ -370,6 +395,8 @@
 
 
     </form>
+        
+    </div>
 
 
 </body>

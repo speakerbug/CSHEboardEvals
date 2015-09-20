@@ -3,29 +3,31 @@
 <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSH Bootstrap Theme -->
+	<link href="css/members.min.css" rel="stylesheet">
     <style type="text/css">
     ul>li, a{cursor: pointer;}
     </style>
-    <title>CSH|E-Board Evals</title>
+    <title>CSH | E-Board Evals</title>
 </head>
 <body>
-<div class="navbar navbar-default" id="navbar">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container" id="navbar-container">
     <div class="navbar-header">
         <a href="#" class="navbar-brand">
-            <small>
-                <i class="glyphicon glyphicon-log-out"></i>
-                CSH - E-Board Evals
-            </small>
+            <ul class="nav navbar-nav navbar-left">
+		    <li><a href="../index.html"><span class="glyphicon glyphicon-arrow-left"></span> Back to Eboard Evals</a></li>
+		  </ul>  
         </a><!-- /.brand -->
         
-    </div><!-- /.navbar-header -->
+    </nav><!-- /.navbar-header -->
     <div class="navbar-header pull-right" role="navigation">
     </div>
     </div>
 </div>
 
-
+<BR><BR><BR>
+    
 <div ng-controller="evalCtrl" pretty-html>
 <div class="container">
 <br/>
@@ -42,12 +44,10 @@
         </div>
         <div class="col-md-3">Filter:
             
-            
-            
             <select ng-model="search" ng-change="filter()" class="form-control">
                 <option selected placeholder="None"></option>
-                <option>chairman</option>
-                <option>rd</option>
+                <option>Chairman</option>
+                <option>RD</option>
                 <option>OpComm</option>
                 <option>Evals</option>
                 <option>Financial</option>

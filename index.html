@@ -9,6 +9,8 @@
     <title>CSH | Eboard Evaluation</title>
     <link href="formCss.css" rel="stylesheet" type="text/css">
     <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery 2.1.3 -->
+    <script src="//friendlyu.com/profile/plugins/jQuery/jQuery-2.1.3.min.js"></script>
     <!-- CSH Bootstrap Theme -->
 	<link href="admin/css/members.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="EboardEvalsTheme.css">
@@ -70,7 +72,7 @@
     
     <div class="container">
     <BR><BR><BR>
-    <form validate class="jotform-form" action="EboardEvals.php" method="POST" name="EboardEvalsForm">
+    <form validate class="jotform-form" action="EboardEvals.php" method="POST" id="EboardEvalsForm" name="EboardEvalsForm">
         <div class="form-all">
             <ul class="form-section page-section">
                 <li id="cid_7" class="form-input-wide" data-type="control_head">
@@ -360,16 +362,16 @@
                 </li>
 
                 <li class="form-line" data-type="control_textarea" id="id_5">
-                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> What you like (Required): </label>
-                    <div id="cid_5" class="form-input jf-required">
-                        <textarea required id="input_5" class="form-textarea form-control" name="like" cols="40" rows="6"></textarea>
+                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> What you like: </label>
+                    <div id="cid_5" class="form-input">
+                        <textarea id="input_5" class="form-textarea form-control" name="like" cols="40" rows="6"></textarea>
                     </div>
                 </li>
 
                 <li class="form-line" data-type="control_textarea" id="id_5">
-                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> What you dislike (Required): </label>
-                    <div id="cid_5" class="form-input jf-required">
-                        <textarea required id="input_5" class="form-textarea form-control" name="dislike" cols="40" rows="6"></textarea>
+                    <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> What you dislike: </label>
+                    <div id="cid_5" class="form-input">
+                        <textarea id="input_5" class="form-textarea form-control" name="dislike" cols="40" rows="6"></textarea>
                     </div>
                 </li>
 
@@ -402,7 +404,34 @@
         
         </div>
 
+    <script>
+    
+$("#EboardEvalsForm").submit(function(e)
+{
 
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        success:function(data, textStatus, jqXHR) 
+        {
+            alert("Your evaluation has been submitted succesfully!");
+        },
+        error: function(jqXHR, textStatus, errorThrown) 
+        {
+            //if fails
+            alert("Please make sure you enter in either a comment you like or dislike.");
+        }
+    });
+    e.preventDefault(); //STOP default action
+    e.unbind(); //unbind. to stop multiple form submit.
+});
+    
+    </script>
+        
 </body>
 
 </html>

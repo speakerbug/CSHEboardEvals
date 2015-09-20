@@ -24,6 +24,15 @@ $like = $_POST['like'];
 $dislike = $_POST['dislike'];
 $otherComments = $_POST['comment'];
 
+
+if ($like == "" && $dislike == "") {
+    http_response_code(403);
+    $result = "You need to say something you like or dislike.";
+    $json = json_encode($result, JSON_UNESCAPED_SLASHES);
+    echo $json;
+    die();
+}
+
 //escape strings
 $user = $mysqli->real_escape_string($user);
 $name = $mysqli->real_escape_string($name);
@@ -82,5 +91,10 @@ mysqli_query($mysqli,$sql) or die(mysqli_error($mysqli));
 
 $mysqli->close();
 
-echo "Submitted";
+    http_response_code(200);
+    $result = "Success";
+    $json = json_encode($result, JSON_UNESCAPED_SLASHES);
+    echo $json;
+    die();
+
 ?>

@@ -1,0 +1,38 @@
+/*
+ *Form CSS
+ */
+.form-all{
+    color:#ff5200;
+    background:url(background.png) #ffffff top repeat-x;
+    font-family: "sans-serif";
+    font-size: 12px;
+}
+
+.form-textbox, .form-textarea, .form-upload, .form-dropdown, .form-matrix-column-headers, .form-matrix-row-headers, .form-matrix-values{
+   font-family: sans-serif;
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   border:1px #cccccc solid;
+   background: url(background.png) #f6f6f6 top repeat-x;
+}
+.form-textbox{
+	width:200px;	
+}
+.form-textarea{
+	max-width:400px;
+	max-height:300px;	
+}
+
+.form-submit-button, .form-submit-reset, .form-submit-print{
+   font-family: "sans-serif";
+   font-size: 11px;
+   font-weight:normal;
+   color:#333333;
+   border:1px #c6c7ca solid;
+   background: url(background.png) #e4e4e4 top repeat-x;
+}
+
+.form-header-group{
+	background: none;
+}

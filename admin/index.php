@@ -69,6 +69,7 @@ if (!in_array($_SERVER['WEBAUTH_USER'], $authorized_users)) {
         <div class="col-md-4">
             <h5>Filtered {{ filtered.length }} of {{ totalItems}} total Submissions</h5>
         </div>
+        <div class="col-md-3"><button type="button" class="btn btn-info" id="expandButton">Expand</button></div>
     </div>
     <br/>
     <div class="row">
@@ -137,6 +138,7 @@ if (!in_array($_SERVER['WEBAUTH_USER'], $authorized_users)) {
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
 <script src="js/prettyHTML.js"></script>
-<script src="app/app.js"></script>    
+<script src="app/app.js"></script>
+<script src="js/admin.js"></script>
     </body>
 </html>

@@ -137,7 +137,7 @@ if (!in_array($_SERVER['WEBAUTH_USER'], $authorized_users)) {
 <script src="js/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
-<script src="js/prettyHTML.js"></script>
+<!--<script src="js/prettyHTML.js"></script> -->
 <script src="app/app.js"></script>
 <script src="js/admin.js"></script>
     </body>

@@ -14,7 +14,7 @@ $(document).ready(function() {
         else{
              $(this).data('expanded','false')
         console.log("CLosing");
-        $(".container").css('width', '100%');  
+        $(".container").css('width', 'auto');  
         }
     });   
 });

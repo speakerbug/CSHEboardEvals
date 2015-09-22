@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    var origWidth;
+    var initialWidth = $('.container').width();
     
     $("#expandButton").click(function()
     {
@@ -14,9 +14,7 @@ $(document).ready(function() {
         else{
              $(this).data('expanded','false')
         console.log("CLosing");
-        $(".container").attr('style', function(i,style){
-            return style.replace(/display[^;]+;?/g, "");  
-        })
+        $('.container').css('width',initialWidth);
         }
     });   
 });

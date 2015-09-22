@@ -14,7 +14,9 @@ $(document).ready(function() {
         else{
              $(this).data('expanded','false')
         console.log("CLosing");
-        $(".container").css('width', 'auto');  
+        $(".container").attr('style', function(i,style){
+            return style.replace(/display[^;]+;?/g, "");  
+        })
         }
     });   
 });

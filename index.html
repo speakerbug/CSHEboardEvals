@@ -418,6 +418,7 @@ $("#EboardEvalsForm").submit(function(e)
         data : postData,
         success:function(data, textStatus, jqXHR) 
         {
+            $('#EboardEvalsForm').trigger("reset");
             alert("Your evaluation has been submitted succesfully!");
         },
         error: function(jqXHR, textStatus, errorThrown) 

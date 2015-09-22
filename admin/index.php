@@ -1,6 +1,6 @@
 <?php
 
-$authorized_users = array("henry", "harsh", "harlan");
+$authorized_users = array("henry", "harsh", "harlan", "ajgajg1134", "faokryn", "jeid", "maxime", "mbillow", "rosehacker", "rossdylan");
 
 if (!in_array($_SERVER['WEBAUTH_USER'], $authorized_users)) {
     echo "You are not authorized to view the admin.";

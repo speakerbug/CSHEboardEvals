@@ -1,4 +1,6 @@
 <html>
+    
+<?php $isActive = false; ?>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -87,6 +89,8 @@
                         </div>
                     </div>
                 </li>
+                
+                <?php if ($isActive) { ?>
                 <li class="form-line" data-type="control_textbox" id="id_1">
                     <label class="form-label form-label-left form-label-auto" id="label_1" for="input_1"> Name (optional): </label>
                     <div id="cid_1" class="form-input jf-required">
@@ -397,6 +401,12 @@
 
 
     </form>
+        
+        <?php }  else { 
+    
+        echo "<BR><BR>EBoard evals are closed.<BR><BR><BR>";
+    
+} ?>
         
         <footer>
             <p class="pull-left">CSH Eboard Evals created by <a href="https://profiles.csh.rit.edu/user/Harsh">Harsh Joshi</a>, <a href="https://profiles.csh.rit.edu/user/henry">Henry Saniuk</a> &amp; <a href="https://profiles.csh.rit.edu/user/hudson">Brandon Hudson</a></p><p class="pull-right"><img src="admin/images/github.png" id="github"> <a href="https://github.com/speakerbug/CSHEboardEvals" target="_blank">GitHub</a></p>

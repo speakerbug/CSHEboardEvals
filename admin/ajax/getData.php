@@ -1,7 +1,7 @@
 <?php
 include('../includes/config.php');
 
-$query="SELECT * FROM evals";
+$query="SELECT * FROM evals WHERE archived = '0'";
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 
 $arr = array();
